@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ramisha Karim | Portfolio</title>
 
 <style>
@@ -13,118 +14,240 @@
     scroll-behavior: smooth;
 }
 
+:root {
+    --brown: #684A37;
+    --dark: #403025;
+    --caramel: #A87958;
+    --beige: #E5D4BE;
+    --cream: #F5EEE3;
+    --white: #FFFCF7;
+    --text: #705D4D;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background: #0b1020;
-    color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
     line-height: 1.7;
 }
 
-header {
-    padding: 22px 8%;
+/* NAVIGATION */
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #11182b;
+    padding: 20px 8%;
+    background: var(--white);
     position: sticky;
     top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #40302512;
 }
 
 .logo {
-    color: #b69cff;
+    color: var(--brown);
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 nav a {
-    color: white;
     text-decoration: none;
-    margin-left: 20px;
+    color: var(--dark);
+    margin-left: 18px;
     font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #b69cff;
+    color: var(--caramel);
 }
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 85vh;
+    padding: 70px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+    background: linear-gradient(120deg, #F5EEE3, #EDE0D0);
+}
+
+.profile {
+    width: 280px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 45% 45% 20px 20px;
+    border: 7px solid var(--white);
+    box-shadow: 0 12px 35px #684A3725;
+}
+
+.hero-text {
+    max-width: 560px;
+}
+
+.hello {
+    color: var(--caramel);
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 60px);
+    color: var(--brown);
+    line-height: 1.2;
+    margin: 12px 0;
+}
+
+.hero-text h2 {
+    color: var(--caramel);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: var(--text);
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    background: var(--brown);
+    color: white;
+    text-decoration: none;
+    padding: 11px 24px;
+    border-radius: 30px;
+    margin-right: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--caramel);
+    transform: translateY(-3px);
+}
+
+/* SOCIAL LINKS */
+
+.socials {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.socials a {
+    color: var(--brown);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: var(--caramel);
+}
+
+/* GENERAL SECTIONS */
 
 section {
     padding: 75px 10%;
 }
 
-.hero {
-    min-height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.section-title {
+    text-align: center;
+    color: var(--brown);
+    font-size: 32px;
+    margin-bottom: 35px;
 }
 
-.hero p {
-    color: #b69cff;
-    font-size: 18px;
+.section-title span {
+    color: var(--caramel);
 }
 
-h1 {
-    font-size: clamp(38px, 7vw, 65px);
-    margin: 12px 0;
-}
-
-h2 {
-    color: #b69cff;
-    margin-bottom: 20px;
-    font-size: 30px;
-}
-
-.description {
-    color: #c3c8d6;
-    max-width: 650px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 11px 25px;
-    background: #9470ed;
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-    width: fit-content;
-}
+/* CARDS */
 
 .card {
-    background: #151e34;
-    padding: 25px;
-    border-radius: 12px;
-    margin-top: 15px;
-    border: 1px solid #29334d;
+    background: var(--white);
+    padding: 28px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px #4030250d;
+    border: 1px solid #E9DDCE;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px #684A3720;
 }
 
 .card h3 {
-    color: #d1bdff;
+    color: var(--brown);
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    color: var(--caramel);
     margin-bottom: 8px;
 }
 
+.card p {
+    color: var(--text);
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+/* SKILLS */
+
 .skills {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 13px;
 }
 
 .skill {
-    background: #202b45;
-    padding: 9px 17px;
-    border-radius: 20px;
-    color: #d1bdff;
+    background: var(--beige);
+    color: var(--brown);
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-weight: 600;
 }
+
+/* EXPERIENCE */
+
+.experience {
+    border-left: 5px solid var(--caramel);
+}
+
+/* FOOTER */
 
 footer {
     text-align: center;
-    padding: 25px;
-    color: #9ba3b7;
-    background: #11182b;
+    padding: 30px;
+    background: var(--brown);
+    color: white;
 }
 
-@media(max-width: 600px) {
-    header {
+footer a {
+    color: #EBD8C3;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width: 700px) {
+    nav {
+        padding: 15px 5%;
         flex-direction: column;
         gap: 12px;
     }
@@ -132,6 +255,22 @@ footer {
     nav a {
         margin: 0 6px;
         font-size: 12px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+        gap: 30px;
+    }
+
+    .profile {
+        width: 220px;
+        height: 280px;
+    }
+
+    .socials {
+        justify-content: center;
     }
 
     section {
@@ -143,96 +282,261 @@ footer {
 
 <body>
 
-<header>
+<!-- NAVIGATION -->
+
+<nav>
     <div class="logo">Ramisha Karim.</div>
-    <nav>
+
+    <div>
         <a href="#about">About</a>
         <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-    </nav>
+    </div>
+</nav>
+
+
+<!-- HERO SECTION -->
+
+<header class="hero">
+
+    <img src="profile.jpg"
+         alt="Ramisha Karim"
+         class="profile">
+
+    <div class="hero-text">
+
+        <div class="hello">HELLO, I'M</div>
+
+        <h1>Ramisha Karim</h1>
+
+        <h2>CSE Student | Aspiring Engineer</h2>
+
+        <p>
+            Welcome to my personal portfolio!
+            I am a Computer Science and Engineering student
+            at IUBAT, passionate about technology, programming,
+            creativity and continuous learning.
+            I believe in exploring new opportunities,
+            developing my skills and turning ideas into reality.
+        </p>
+
+        <a href="#about" class="btn">Explore More</a>
+        <a href="#contact" class="btn">Contact Me</a>
+
+        <div class="socials">
+            <a href="https://github.com/ramishakarim"
+               target="_blank">GitHub</a>
+
+            <a href="https://www.instagram.com/_ramishakarim_/"
+               target="_blank">Instagram</a>
+
+            <a href="https://www.facebook.com/share/1QPvE5y5BV/"
+               target="_blank">Facebook</a>
+        </div>
+
+    </div>
 </header>
 
-<section class="hero">
-    <p>Hello, welcome to my portfolio!</p>
-    <h1>I'm Ramisha Karim.</h1>
-    <h2>CSE Student & Aspiring Engineer</h2>
-    <p class="description">
-        Exploring the world of technology, learning to code,
-        solving problems and turning ideas into reality.
-    </p>
-    <a href="#about" class="btn">Discover More</a>
-</section>
+
+<!-- ABOUT ME -->
 
 <section id="about">
-    <h2>About Me</h2>
+
+    <h2 class="section-title">About <span>Me</span></h2>
+
     <div class="card">
         <p>
-            I am Ramisha Karim, a Computer Science and Engineering
-            student at IUBAT. I am passionate about technology,
-            programming and continuous learning.
-            I believe every new challenge is an opportunity
-            to grow, explore and create something meaningful.
+            I am Ramisha Karim, currently pursuing my studies
+            in Computer Science and Engineering at the
+            International University of Business Agriculture
+            and Technology (IUBAT).
+
+            I am interested in programming, problem-solving,
+            technology and creative thinking. Alongside my
+            academic journey, I enjoy participating in
+            organizational activities and exploring opportunities
+            that help me grow both personally and professionally.
         </p>
     </div>
+
 </section>
+
+
+<!-- EDUCATION -->
 
 <section id="education">
-    <h2>Education</h2>
-    <div class="card">
-        <h3>Bachelor of Science in CSE</h3>
-        <p>International University of Business Agriculture and Technology (IUBAT)</p>
-        <p>Currently pursuing my undergraduate degree.</p>
+
+    <h2 class="section-title">My <span>Education</span></h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Bachelor of Science</h3>
+            <h4>Computer Science and Engineering</h4>
+            <p>
+                International University of Business Agriculture
+                and Technology (IUBAT)
+            </p>
+            <p>Currently Studying</p>
+        </div>
+
+        <div class="card">
+            <h3>Higher Secondary Certificate</h3>
+            <h4>HSC</h4>
+            <p>
+                Shaheed Bir Uttam Lt. Anwar Girls' College
+            </p>
+            <p>GPA: 5.00</p>
+        </div>
+
+        <div class="card">
+            <h3>Secondary School Certificate</h3>
+            <h4>SSC</h4>
+            <p>
+                Shaheed Bir Uttam Lt. Anwar Girls' College
+            </p>
+            <p>GPA: 5.00</p>
+        </div>
+
     </div>
-    <div class="card">
-        <h3>Higher Secondary Certificate (HSC)</h3>
-        <p>Shaheed Bir Uttam Lt Anwar Girls' College</p>
-    </div>
-    <div class="card">
-        <h3>Secondary School Certificate (SSC)</h3>
-        <p>Shaheed Bir Uttam Lt Anwar Girls' College</p>
-    </div>
+
 </section>
+
+
+<!-- LEADERSHIP AND EXPERIENCE -->
+
+<section id="experience">
+
+    <h2 class="section-title">
+        Leadership & Past <span>Experience</span>
+    </h2>
+
+    <div class="card experience">
+
+        <h3>Former Associate Director of Communication
+            & Public Relations</h3>
+
+        <h4>Youth For A Green Earth (YGE)</h4>
+
+        <p><strong>Green Genesis 2026 | Organizer</strong></p>
+
+        <br>
+
+        <p>
+            Served as an organizer of Green Genesis 2026,
+            a large-scale environmental initiative hosted
+            by Youth For A Green Earth (YGE).
+
+            Contributed to event coordination, participant
+            communication, public relations and organizational
+            activities. Worked alongside the organizing team
+            to promote environmental awareness, encourage
+            youth engagement and support the successful
+            execution of the event.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
 
 <section id="skills">
-    <h2>My Skills</h2>
+
+    <h2 class="section-title">My <span>Skills</span></h2>
+
     <div class="skills">
-        <span class="skill">C Programming</span>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">Communication</span>
-        <span class="skill">Teamwork</span>
-        <span class="skill">Problem Solving</span>
+
+        <div class="skill">C Programming</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Communication</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Leadership</div>
+        <div class="skill">Public Relations</div>
+        <div class="skill">Event Coordination</div>
+        <div class="skill">English</div>
+        <div class="skill">Bangla</div>
+
     </div>
+
 </section>
+
+
+<!-- PROJECTS -->
 
 <section id="projects">
-    <h2>My Projects</h2>
-    <div class="card">
-        <h3>My First Portfolio</h3>
-        <p>A personal website created using HTML and CSS
-        to showcase my learning journey and interests.</p>
+
+    <h2 class="section-title">My <span>Projects</span></h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>C Programming</h3>
+            <p>
+                Beginner-level programming exercises and
+                problem-solving projects using C.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Personal Portfolio</h3>
+            <p>
+                A personal website built using HTML and CSS
+                to showcase my education, skills and experience.
+            </p>
+        </div>
+
     </div>
-    <div class="card">
-        <h3>More Projects Coming Soon</h3>
-        <p>Currently exploring programming and working
-        towards building more projects.</p>
-    </div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
-    <h2>Let's Connect</h2>
-    <div class="card">
-        <p>Interested in technology, collaboration or sharing ideas?</p>
-        <p>Email: YOUR_EMAIL_HERE</p>
-        <p>GitHub: github.com/ramishakarim</p>
+
+    <h2 class="section-title">Get In <span>Touch</span></h2>
+
+    <div class="card" style="text-align:center;">
+
+        <h3>Let's Connect!</h3>
+
+        <p>
+            Feel free to connect with me through
+            my social media profiles.
+        </p>
+
+        <br>
+
+        <div class="socials" style="justify-content:center;">
+
+            <a href="https://github.com/ramishakarim"
+               target="_blank">GitHub</a>
+
+            <a href="https://www.instagram.com/_ramishakarim_/"
+               target="_blank">Instagram</a>
+
+            <a href="https://www.facebook.com/share/1QPvE5y5BV/"
+               target="_blank">Facebook</a>
+
+        </div>
+
     </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 Ramisha Karim. All Rights Reserved.</p>
-    <p>Designed with curiosity and creativity.</p>
+
+    <p>Designed & Created by Ramisha Karim</p>
+
+    <p>© 2026 | All Rights Reserved</p>
+
 </footer>
 
 </body>
