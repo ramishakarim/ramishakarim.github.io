@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramisha Karim | Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f5f5;
+    line-height: 1.7;
+}
+
+header {
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11182b;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    color: #b69cff;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #b69cff;
+}
+
+section {
+    padding: 75px 10%;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero p {
+    color: #b69cff;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    margin: 12px 0;
+}
+
+h2 {
+    color: #b69cff;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.description {
+    color: #c3c8d6;
+    max-width: 650px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 11px 25px;
+    background: #9470ed;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    width: fit-content;
+}
+
+.card {
+    background: #151e34;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 15px;
+    border: 1px solid #29334d;
+}
+
+.card h3 {
+    color: #d1bdff;
+    margin-bottom: 8px;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill {
+    background: #202b45;
+    padding: 9px 17px;
+    border-radius: 20px;
+    color: #d1bdff;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #9ba3b7;
+    background: #11182b;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav a {
+        margin: 0 6px;
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Ramisha Karim.</div>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <p>Hello, welcome to my portfolio!</p>
+    <h1>I'm Ramisha Karim.</h1>
+    <h2>CSE Student & Aspiring Engineer</h2>
+    <p class="description">
+        Exploring the world of technology, learning to code,
+        solving problems and turning ideas into reality.
+    </p>
+    <a href="#about" class="btn">Discover More</a>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>
+            I am Ramisha Karim, a Computer Science and Engineering
+            student at IUBAT. I am passionate about technology,
+            programming and continuous learning.
+            I believe every new challenge is an opportunity
+            to grow, explore and create something meaningful.
+        </p>
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="card">
+        <h3>Bachelor of Science in CSE</h3>
+        <p>International University of Business Agriculture and Technology (IUBAT)</p>
+        <p>Currently pursuing my undergraduate degree.</p>
+    </div>
+    <div class="card">
+        <h3>Higher Secondary Certificate (HSC)</h3>
+        <p>Shaheed Bir Uttam Lt Anwar Girls' College</p>
+    </div>
+    <div class="card">
+        <h3>Secondary School Certificate (SSC)</h3>
+        <p>Shaheed Bir Uttam Lt Anwar Girls' College</p>
+    </div>
+</section>
+
+<section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills">
+        <span class="skill">C Programming</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">Communication</span>
+        <span class="skill">Teamwork</span>
+        <span class="skill">Problem Solving</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>My Projects</h2>
+    <div class="card">
+        <h3>My First Portfolio</h3>
+        <p>A personal website created using HTML and CSS
+        to showcase my learning journey and interests.</p>
+    </div>
+    <div class="card">
+        <h3>More Projects Coming Soon</h3>
+        <p>Currently exploring programming and working
+        towards building more projects.</p>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Let's Connect</h2>
+    <div class="card">
+        <p>Interested in technology, collaboration or sharing ideas?</p>
+        <p>Email: ramisha.sms.yge@gmail.com</p>
+        <p>GitHub: github.com/ramishakarim</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Ramisha Karim. All Rights Reserved.</p>
+    <p>Designed with curiosity and creativity.</p>
+</footer>
+
+</body>
+</html>
