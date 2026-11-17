@@ -3,541 +3,536 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ramisha Karim | Portfolio</title>
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+:root {
+  --brown: #594332;
+  --dark: #30271f;
+  --accent: #a47c59;
+  --beige: #e7dccb;
+  --cream: #f5f1e9;
+  --white: #fffefa;
+  --text: #706354;
 }
 
-:root {
-    --brown: #684A37;
-    --dark: #403025;
-    --caramel: #A87958;
-    --beige: #E5D4BE;
-    --cream: #F5EEE3;
-    --white: #FFFCF7;
-    --text: #705D4D;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--cream);
-    color: var(--dark);
-    line-height: 1.7;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
 }
 
-/* NAVIGATION */
-
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background: var(--white);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 3px 15px #40302512;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white);
+  padding: 18px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px #30271f12;
 }
 
 .logo {
-    color: var(--brown);
-    font-size: 23px;
-    font-weight: 800;
+  color: var(--brown);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 1px;
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--dark);
-    margin-left: 18px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: 0.3s;
+  color: var(--brown);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-nav a:hover {
-    color: var(--caramel);
+nav a:hover, .socials a:hover {
+  color: var(--accent);
 }
-
-/* HERO SECTION */
 
 .hero {
-    min-height: 85vh;
-    padding: 70px 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 65px;
-    background: linear-gradient(120deg, #F5EEE3, #EDE0D0);
+  background: #ede4d7;
+  padding: 70px 10%;
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }
 
 .profile {
-    width: 280px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 45% 45% 20px 20px;
-    border: 7px solid var(--white);
-    box-shadow: 0 12px 35px #684A3725;
+  width: 225px;
+  height: 275px;
+  object-fit: cover;
+  border: 5px solid white;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px #30271f20;
 }
 
-.hero-text {
-    max-width: 560px;
-}
-
-.hello {
-    color: var(--caramel);
-    font-weight: 800;
-    letter-spacing: 3px;
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 h1 {
-    font-size: clamp(38px, 6vw, 60px);
-    color: var(--brown);
-    line-height: 1.2;
-    margin: 12px 0;
+  color: var(--brown);
+  font-size: clamp(36px, 5vw, 54px);
+  line-height: 1.2;
+  margin: 10px 0;
 }
 
-.hero-text h2 {
-    color: var(--caramel);
-    font-size: 22px;
-    margin-bottom: 15px;
+.hero h2 {
+  color: var(--accent);
+  font-size: 19px;
+  margin-bottom: 12px;
 }
 
-.hero-text p {
-    color: var(--text);
-    margin-bottom: 25px;
+.hero p, .card p {
+  color: var(--text);
 }
-
-/* BUTTONS */
-
-.btn {
-    display: inline-block;
-    background: var(--brown);
-    color: white;
-    text-decoration: none;
-    padding: 11px 24px;
-    border-radius: 30px;
-    margin-right: 8px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: var(--caramel);
-    transform: translateY(-3px);
-}
-
-/* SOCIAL LINKS */
 
 .socials {
-    margin-top: 25px;
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .socials a {
-    color: var(--brown);
-    font-weight: 700;
-    text-decoration: none;
+  color: var(--brown);
+  text-decoration: none;
+  font-weight: 700;
 }
-
-.socials a:hover {
-    color: var(--caramel);
-}
-
-/* GENERAL SECTIONS */
 
 section {
-    padding: 75px 10%;
+  padding: 60px 10%;
 }
 
 .section-title {
-    text-align: center;
-    color: var(--brown);
-    font-size: 32px;
-    margin-bottom: 35px;
+  color: var(--brown);
+  font-size: 29px;
+  margin-bottom: 28px;
 }
 
 .section-title span {
-    color: var(--caramel);
+  color: var(--accent);
 }
 
-/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+}
 
 .card {
-    background: var(--white);
-    padding: 28px;
-    border-radius: 18px;
-    box-shadow: 0 5px 25px #4030250d;
-    border: 1px solid #E9DDCE;
-    transition: 0.3s;
+  background: var(--white);
+  border: 1px solid var(--beige);
+  border-radius: 8px;
+  padding: 24px;
+  transition: .25s;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px #684A3720;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px #30271f12;
 }
 
 .card h3 {
-    color: var(--brown);
-    margin-bottom: 10px;
+  color: var(--brown);
+  margin-bottom: 8px;
 }
 
 .card h4 {
-    color: var(--caramel);
-    margin-bottom: 8px;
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
-.card p {
-    color: var(--text);
+.experience-card {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
-/* GRID */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
+.experience-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
-/* SKILLS */
+.experience-info {
+  padding: 22px;
+}
+
+.experience-info small {
+  color: var(--accent);
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.view-details {
+  display: inline-block;
+  color: var(--brown);
+  font-weight: 700;
+  margin-top: 12px;
+}
 
 .skills {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .skill {
-    background: var(--beige);
-    color: var(--brown);
-    padding: 12px 22px;
-    border-radius: 25px;
-    font-weight: 600;
+  background: var(--beige);
+  color: var(--brown);
+  padding: 9px 17px;
+  border-radius: 5px;
+  font-weight: 600;
 }
 
-/* EXPERIENCE */
-
-.experience {
-    border-left: 5px solid var(--caramel);
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
 }
 
-/* FOOTER */
+.contact-links a {
+  color: var(--brown);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* POPUP */
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #201913bd;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--white);
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  position: relative;
+  animation: appear .25s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-body {
+  padding: 28px;
+}
+
+.modal-body h2 {
+  color: var(--brown);
+  margin: 8px 0;
+}
+
+.modal-body h3 {
+  color: var(--accent);
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.modal-body p {
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: white;
+  color: var(--brown);
+  font-size: 26px;
+  cursor: pointer;
+}
 
 footer {
+  background: var(--brown);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media (max-width: 700px) {
+  nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a {
+    margin: 0 6px;
+    font-size: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
     text-align: center;
-    padding: 30px;
-    background: var(--brown);
-    color: white;
-}
+    padding: 45px 7%;
+  }
 
-footer a {
-    color: #EBD8C3;
-    text-decoration: none;
-}
+  .profile {
+    width: 200px;
+    height: 245px;
+  }
 
-/* MOBILE RESPONSIVE */
+  .socials {
+    justify-content: center;
+  }
 
-@media(max-width: 700px) {
-    nav {
-        padding: 15px 5%;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    nav a {
-        margin: 0 6px;
-        font-size: 12px;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 55px 7%;
-        gap: 30px;
-    }
-
-    .profile {
-        width: 220px;
-        height: 280px;
-    }
-
-    .socials {
-        justify-content: center;
-    }
-
-    section {
-        padding: 55px 7%;
-    }
+  section {
+    padding: 45px 7%;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
-    <div class="logo">Ramisha Karim.</div>
-
-    <div>
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <div class="logo">RAMISHA KARIM</div>
+  <div>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
 </nav>
 
-
-<!-- HERO SECTION -->
-
 <header class="hero">
+  <img src="profile.jpg" alt="Ramisha Karim" class="profile">
 
-    <img src="profile.jpg"
-         alt="Ramisha Karim"
-         class="profile">
+  <div>
+    <div class="eyebrow">COMPUTER SCIENCE & ENGINEERING</div>
+    <h1>Ramisha Karim</h1>
+    <h2>CSE Student | Aspiring Engineer</h2>
 
-    <div class="hero-text">
+    <p>
+      Currently studying Computer Science and Engineering at IUBAT.
+      Interested in programming, problem-solving, technology and
+      developing practical skills through continuous learning.
+    </p>
 
-        <div class="hello">HELLO, I'M</div>
-
-        <h1>Ramisha Karim</h1>
-
-        <h2>CSE Student | Aspiring Engineer</h2>
-
-        <p>
-            Welcome to my personal portfolio!
-            I am a Computer Science and Engineering student
-            at IUBAT, passionate about technology, programming,
-            creativity and continuous learning.
-            I believe in exploring new opportunities,
-            developing my skills and turning ideas into reality.
-        </p>
-
-        <a href="#about" class="btn">Explore More</a>
-        <a href="#contact" class="btn">Contact Me</a>
-
-        <div class="socials">
-            <a href="https://github.com/ramishakarim"
-               target="_blank">GitHub</a>
-
-            <a href="https://www.instagram.com/_ramishakarim_/"
-               target="_blank">Instagram</a>
-
-            <a href="https://www.facebook.com/share/1QPvE5y5BV/"
-               target="_blank">Facebook</a>
-        </div>
-
+    <div class="socials">
+      <a href="https://github.com/ramishakarim" target="_blank">GitHub</a>
+      <a href="https://www.instagram.com/_ramishakarim_/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/share/1QPvE5y5BV/" target="_blank">Facebook</a>
     </div>
+  </div>
 </header>
 
+<section id="education">
+  <h2 class="section-title">Education</h2>
 
-<!-- ABOUT ME -->
-
-<section id="about">
-
-    <h2 class="section-title">About <span>Me</span></h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Bachelor of Science</h3>
+      <h4>Computer Science & Engineering</h4>
+      <p>International University of Business Agriculture and Technology (IUBAT)</p>
+      <p>Currently studying</p>
+    </div>
 
     <div class="card">
-        <p>
-            I am Ramisha Karim, currently pursuing my studies
-            in Computer Science and Engineering at the
-            International University of Business Agriculture
-            and Technology (IUBAT).
-
-            I am interested in programming, problem-solving,
-            technology and creative thinking. Alongside my
-            academic journey, I enjoy participating in
-            organizational activities and exploring opportunities
-            that help me grow both personally and professionally.
-        </p>
+      <h3>Higher Secondary Certificate</h3>
+      <h4>HSC | GPA 5.00</h4>
+      <p>Shaheed Bir Uttam Lt. Anwar Girls' College</p>
     </div>
 
-</section>
-
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-    <h2 class="section-title">My <span>Education</span></h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>Bachelor of Science</h3>
-            <h4>Computer Science and Engineering</h4>
-            <p>
-                International University of Business Agriculture
-                and Technology (IUBAT)
-            </p>
-            <p>Currently Studying</p>
-        </div>
-
-        <div class="card">
-            <h3>Higher Secondary Certificate</h3>
-            <h4>HSC</h4>
-            <p>
-                Shaheed Bir Uttam Lt. Anwar Girls' College
-            </p>
-            <p>GPA: 5.00</p>
-        </div>
-
-        <div class="card">
-            <h3>Secondary School Certificate</h3>
-            <h4>SSC</h4>
-            <p>
-                Shaheed Bir Uttam Lt. Anwar Girls' College
-            </p>
-            <p>GPA: 5.00</p>
-        </div>
-
+    <div class="card">
+      <h3>Secondary School Certificate</h3>
+      <h4>SSC | GPA 5.00</h4>
+      <p>Shaheed Bir Uttam Lt. Anwar Girls' College</p>
     </div>
-
+  </div>
 </section>
-
-
-<!-- LEADERSHIP AND EXPERIENCE -->
 
 <section id="experience">
+  <h2 class="section-title">Leadership & <span>Experience</span></h2>
 
-    <h2 class="section-title">
-        Leadership & Past <span>Experience</span>
-    </h2>
+  <div class="grid">
+    <button class="card experience-card" onclick="openModal()">
+      <img
+        src="https://media-stg.assettype.com/bdnews-english/import/english/imgAll/2026September/brac-university-1789290758.jpg"
+        alt="Green Genesis 2026 event photograph">
 
-    <div class="card experience">
-
-        <h3>Former Associate Director of Communication
-            & Public Relations</h3>
-
-        <h4>Youth For A Green Earth (YGE)</h4>
-
-        <p><strong>Green Genesis 2026 | Organizer</strong></p>
-
-        <br>
-
-        <p>
-            Served as an organizer of Green Genesis 2026,
-            a large-scale environmental initiative hosted
-            by Youth For A Green Earth (YGE).
-
-            Contributed to event coordination, participant
-            communication, public relations and organizational
-            activities. Worked alongside the organizing team
-            to promote environmental awareness, encourage
-            youth engagement and support the successful
-            execution of the event.
-        </p>
-
-    </div>
-
+      <div class="experience-info">
+        <small>YOUTH FOR A GREEN EARTH · 2026</small>
+        <h3>Green Genesis 2026</h3>
+        <p>Former Associate Director of Communication & Public Relations</p>
+        <span class="view-details">View full experience →</span>
+      </div>
+    </button>
+  </div>
 </section>
 
+<div class="modal" id="eventModal" onclick="outsideClose(event)">
+  <div class="modal-content">
+    <button class="close" onclick="closeModal()" aria-label="Close">&times;</button>
 
-<!-- SKILLS -->
+    <img
+      src="https://media-stg.assettype.com/bdnews-english/import/english/imgAll/2026September/brac-university-1789290758.jpg"
+      alt="Green Genesis 2026 closing ceremony">
+
+    <div class="modal-body">
+      <div class="eyebrow">ORGANIZATIONAL EXPERIENCE · 2026</div>
+
+      <h2>Green Genesis 2026</h2>
+
+      <h3>Former Associate Director of Communication & Public Relations</h3>
+
+      <p><strong>Youth For A Green Earth (YGE)</strong></p>
+
+      <p>
+        Served as an organizer of Green Genesis 2026, a nationwide
+        environmental festival hosted at BRAC University in collaboration
+        with Youth For A Green Earth and other organizing partners.
+      </p>
+
+      <p>
+        Contributed to participant communication, public relations,
+        event coordination and organizational activities while working
+        with the organizing team.
+      </p>
+
+      <p>
+        This experience strengthened my communication, teamwork,
+        leadership and event-management skills while allowing me
+        to contribute to youth engagement and environmental awareness.
+      </p>
+
+      <a
+        class="view-details"
+        href="https://bdnews24.com/campus/b4723585554d"
+        target="_blank">
+        Read event coverage →
+      </a>
+    </div>
+  </div>
+</div>
 
 <section id="skills">
+  <h2 class="section-title">Technical <span>Skills</span></h2>
 
-    <h2 class="section-title">My <span>Skills</span></h2>
-
-    <div class="skills">
-
-        <div class="skill">C Programming</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Communication</div>
-        <div class="skill">Teamwork</div>
-        <div class="skill">Leadership</div>
-        <div class="skill">Public Relations</div>
-        <div class="skill">Event Coordination</div>
-        <div class="skill">English</div>
-        <div class="skill">Bangla</div>
-
-    </div>
-
+  <div class="skills">
+    <span class="skill">C Programming</span>
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+    <span class="skill">Problem Solving</span>
+    <span class="skill">Communication</span>
+    <span class="skill">Teamwork</span>
+    <span class="skill">Event Coordination</span>
+    <span class="skill">Public Relations</span>
+  </div>
 </section>
-
-
-<!-- PROJECTS -->
 
 <section id="projects">
+  <h2 class="section-title">Selected <span>Projects</span></h2>
 
-    <h2 class="section-title">My <span>Projects</span></h2>
-
-    <div class="grid">
-
-        <div class="card">
-            <h3>C Programming</h3>
-            <p>
-                Beginner-level programming exercises and
-                problem-solving projects using C.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Personal Portfolio</h3>
-            <p>
-                A personal website built using HTML and CSS
-                to showcase my education, skills and experience.
-            </p>
-        </div>
-
+  <div class="grid">
+    <div class="card">
+      <h3>C Programming Exercises</h3>
+      <p>
+        Beginner-level programming practice involving conditions,
+        operators, calculations and problem-solving.
+      </p>
     </div>
 
+    <div class="card">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        A personal website built using HTML and CSS to present
+        academic background, skills and experience.
+      </p>
+    </div>
+  </div>
 </section>
-
-
-<!-- CONTACT -->
 
 <section id="contact">
+  <h2 class="section-title">Let's <span>Connect</span></h2>
 
-    <h2 class="section-title">Get In <span>Touch</span></h2>
+  <p>Find me through my professional and social platforms.</p>
 
-    <div class="card" style="text-align:center;">
-
-        <h3>Let's Connect!</h3>
-
-        <p>
-            Feel free to connect with me through
-            my social media profiles.
-        </p>
-
-        <br>
-
-        <div class="socials" style="justify-content:center;">
-
-            <a href="https://github.com/ramishakarim"
-               target="_blank">GitHub</a>
-
-            <a href="https://www.instagram.com/_ramishakarim_/"
-               target="_blank">Instagram</a>
-
-            <a href="https://www.facebook.com/share/1QPvE5y5BV/"
-               target="_blank">Facebook</a>
-
-        </div>
-
-    </div>
-
+  <div class="contact-links" style="margin-top:18px">
+    <a href="https://github.com/ramishakarim" target="_blank">GitHub ↗</a>
+    <a href="https://www.instagram.com/_ramishakarim_/" target="_blank">Instagram ↗</a>
+    <a href="https://www.facebook.com/share/1QPvE5y5BV/" target="_blank">Facebook ↗</a>
+  </div>
 </section>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-    <p>Designed & Created by Ramisha Karim</p>
-
-    <p>© 2026 | All Rights Reserved</p>
-
+  <p>© 2026 Ramisha Karim | Personal Portfolio</p>
 </footer>
+
+<script>
+function openModal() {
+  document.getElementById("eventModal").classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("eventModal").classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+function outsideClose(event) {
+  if (event.target.id === "eventModal") {
+    closeModal();
+  }
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
+</script>
 
 </body>
 </html>
